@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Available Internships</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            Student Internship Management System
+        </h1>
+
+        <nav>
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="internships.html">
+                Internships
+            </a>
+
+            <a href="application.html">
+                My Applications
+            </a>
+
+            <a href="student-profile.html">
+                My Profile
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <section>
+
+        <h2>
+            Available Internships
+        </h2>
+
+        <p>
+            Find the right internship opportunity for your career.
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search internships..."
+            onkeyup="searchInternships()"
+        >
+
+    </section>
+
+
+    <section id="internshipList">
+
+
+        <div class="card internship">
+
+            <h3>
+                Web Development Intern
+            </h3>
+
+            <p>
+                <strong>Company:</strong>
+                ABC Technologies
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Chennai
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                3 Months
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                HTML, CSS, JavaScript
+            </p>
+
+            <p>
+                <strong>Stipend:</strong>
+                ₹10,000
+            </p>
+
+            <button onclick="applyNow()">
+                Apply Now
+            </button>
+
+        </div>
+
+
+        <div class="card internship">
+
+            <h3>
+                Python Developer Intern
+            </h3>
+
+            <p>
+                <strong>Company:</strong>
+                XYZ Solutions
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Bangalore
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                6 Months
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                Python, Django, SQL
+            </p>
+
+            <p>
+                <strong>Stipend:</strong>
+                ₹12,000
+            </p>
+
+            <button onclick="applyNow()">
+                Apply Now
+            </button>
+
+        </div>
+
+
+        <div class="card internship">
+
+            <h3>
+                Data Analytics Intern
+            </h3>
+
+            <p>
+                <strong>Company:</strong>
+                Tech Solutions
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Hyderabad
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                4 Months
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                Python, Excel, Power BI
+            </p>
+
+            <p>
+                <strong>Stipend:</strong>
+                ₹15,000
+            </p>
+
+            <button onclick="applyNow()">
+                Apply Now
+            </button>
+
+        </div>
+
+
+        <div class="card internship">
+
+            <h3>
+                Full Stack Developer Intern
+            </h3>
+
+            <p>
+                <strong>Company:</strong>
+                Innovative Systems
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Remote
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                6 Months
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                HTML, CSS, JS, Node.js
+            </p>
+
+            <p>
+                <strong>Stipend:</strong>
+                ₹18,000
+            </p>
+
+            <button onclick="applyNow()">
+                Apply Now
+            </button>
+
+        </div>
+
+
+        <div class="card internship">
+
+            <h3>
+                Cloud Computing Intern
+            </h3>
+
+            <p>
+                <strong>Company:</strong>
+                CloudTech India
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Chennai
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                3 Months
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                AWS, Azure, Linux
+            </p>
+
+            <p>
+                <strong>Stipend:</strong>
+                ₹14,000
+            </p>
+
+            <button onclick="applyNow()">
+                Apply Now
+            </button>
+
+        </div>
+
+
+        <div class="card internship">
+
+            <h3>
+                AI & Machine Learning Intern
+            </h3>
+
+            <p>
+                <strong>Company:</strong>
+                AI Innovations
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Remote
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                5 Months
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                Python, ML, AI
+            </p>
+
+            <p>
+                <strong>Stipend:</strong>
+                ₹20,000
+            </p>
+
+            <button onclick="applyNow()">
+                Apply Now
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Student Internship Management System
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function applyNow() {
+
+            alert(
+                "Application page will open soon."
+            );
+
+        }
+
+
+        function searchInternships() {
+
+            let search =
+                document.getElementById("search")
+                .value
+                .toLowerCase();
+
+            let internships =
+                document.getElementsByClassName("internship");
+
+
+            for (
+                let i = 0;
+                i < internships.length;
+                i++
+            ) {
+
+                let text =
+                    internships[i]
+                    .innerText
+                    .toLowerCase();
+
+
+                if (text.includes(search)) {
+
+                    internships[i].style.display =
+                        "block";
+
+                } else {
+
+                    internships[i].style.display =
+                        "none";
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration - Internship Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <div class="register-box">
+
+            <h1>Student Registration</h1>
+
+            <p>
+                Create your account to apply for internships
+            </p>
+
+            <form id="studentRegisterForm">
+
+                <!-- Full Name -->
+                <label for="fullName">Full Name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <!-- Email -->
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <!-- Phone -->
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    required
+                >
+
+                <!-- College -->
+                <label for="college">College Name</label>
+                <input
+                    type="text"
+                    id="college"
+                    name="college"
+                    placeholder="Enter your college name"
+                    required
+                >
+
+                <!-- Department -->
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option value="IT">
+                        Information Technology
+                    </option>
+
+                    <option value="CSE">
+                        Computer Science Engineering
+                    </option>
+
+                    <option value="ECE">
+                        Electronics and Communication
+                    </option>
+
+                    <option value="EEE">
+                        Electrical and Electronics
+                    </option>
+
+                    <option value="AIDS">
+                        Artificial Intelligence and Data Science
+                    </option>
+
+                    <option value="MECH">
+                        Mechanical Engineering
+                    </option>
+
+                </select>
+
+                <!-- Year -->
+                <label for="year">Year of Study</label>
+                <select id="year" name="year" required>
+
+                    <option value="">
+                        Select Year
+                    </option>
+
+                    <option value="1">
+                        First Year
+                    </option>
+
+                    <option value="2">
+                        Second Year
+                    </option>
+
+                    <option value="3">
+                        Third Year
+                    </option>
+
+                    <option value="4">
+                        Final Year
+                    </option>
+
+                </select>
+
+                <!-- Skills -->
+                <label for="skills">Skills</label>
+                <textarea
+                    id="skills"
+                    name="skills"
+                    rows="4"
+                    placeholder="Example: HTML, CSS, JavaScript, Python, Java"
+                    required
+                ></textarea>
+
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create a password"
+                    required
+                >
+
+                <!-- Confirm Password -->
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm your password"
+                    required
+                >
+
+                <!-- Terms -->
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <label for="terms">
+                        I agree to the terms and conditions
+                    </label>
+
+                </div>
+
+                <!-- Register Button -->
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="register-links">
+
+                <p>
+                    Already have an account?
+                </p>
+
+                <a href="student-login.html">
+                    Student Login
+                </a>
+
+                <br><br>
+
+                <a href="index.html">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

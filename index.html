@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBM Internship Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-logo">IBM</span>
+      <span>Internship Management System</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation">☰</button>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#internships">Internship</a>
+      <a href="#application">Application</a>
+      <a href="#about">About</a>
+      <a href="#login" class="login-link">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR CAREER STARTS HERE</span>
+        <h1>Build Your Future<br>with <span>IBM</span></h1>
+        <p>
+          Explore internship opportunities, gain real-world experience
+          and take the next step towards your dream career.
+        </p>
+        <a class="btn" href="#internships">Explore Internships →</a>
+
+        <div class="hero-stats">
+          <div><strong>03+</strong><small>Career Paths</small></div>
+          <div><strong>100%</strong><small>Learning Focus</small></div>
+          <div><strong>1 Goal</strong><small>Your Future</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-card">
+          <div class="visual-icon">✦</div>
+          <span class="visual-label">YOUR NEXT CHAPTER</span>
+          <h2>Learn.<br>Build.<br><span>Grow.</span></h2>
+          <p>Turn your skills into opportunities.</p>
+          <div class="visual-line"></div>
+          <span class="visual-note">INTERNSHIP PROGRAM</span>
+        </div>
+        <div class="floating-card">✦ &nbsp; Explore new possibilities</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <article class="benefit">
+        <div class="benefit-icon">▣</div>
+        <h3>Real Projects</h3>
+        <p>Practice your skills through project-based learning.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-icon">♙</div>
+        <h3>Expert Guidance</h3>
+        <p>Develop your professional and technical skills.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-icon">↗</div>
+        <h3>Career Growth</h3>
+        <p>Build confidence for your future career.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-icon">☆</div>
+        <h3>New Opportunities</h3>
+        <p>Explore different technology career paths.</p>
+      </article>
+    </section>
+
+    <section id="internships" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">FIND YOUR OPPORTUNITY</span>
+        <h2>Explore <span>Internships</span></h2>
+        <p>Choose a learning path that matches your interests.</p>
+      </div>
+
+      <div class="internship-grid">
+        <article class="internship-card">
+          <div class="card-top">
+            <span class="card-icon">⌘</span>
+            <span class="tag">Technology</span>
+          </div>
+          <h3>Web Development Intern</h3>
+          <p>Create engaging websites and learn modern web technologies.</p>
+          <div class="details"><span>◷ 3 Months</span><span>⌖ Flexible</span></div>
+          <div class="skills"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <button class="btn apply-btn" data-internship="Web Development Intern">Apply Now →</button>
+        </article>
+
+        <article class="internship-card featured">
+          <div class="card-top">
+            <span class="card-icon">⌘</span>
+            <span class="tag">Popular</span>
+          </div>
+          <h3>Software Development Intern</h3>
+          <p>Learn programming, problem-solving and software development.</p>
+          <div class="details"><span>◷ 6 Months</span><span>⌖ Flexible</span></div>
+          <div class="skills"><span>Java</span><span>Node.js</span><span>APIs</span></div>
+          <button class="btn apply-btn" data-internship="Software Development Intern">Apply Now →</button>
+        </article>
+
+        <article class="internship-card">
+          <div class="card-top">
+            <span class="card-icon">▥</span>
+            <span class="tag">Analytics</span>
+          </div>
+          <h3>Data Analytics Intern</h3>
+          <p>Explore datasets and learn how to discover useful insights.</p>
+          <div class="details"><span>◷ 3 Months</span><span>⌖ Flexible</span></div>
+          <div class="skills"><span>Python</span><span>SQL</span><span>Data</span></div>
+          <button class="btn apply-btn" data-internship="Data Analytics Intern">Apply Now →</button>
+        </article>
+      </div>
+      <p class="disclaimer">Demo opportunities for this academic project. These are not verified live IBM vacancies.</p>
+    </section>
+
+    <section id="application" class="section application-section">
+      <div class="section-heading">
+        <span class="eyebrow">TAKE THE FIRST STEP</span>
+        <h2>Apply for an <span>Internship</span></h2>
+        <p>Complete the form below to submit your application.</p>
+      </div>
+
+      <div class="form-card">
+        <form id="applicationForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="appName">Full Name *</label>
+              <input id="appName" name="name" type="text" placeholder="Enter your full name" required>
+            </div>
+            <div class="field">
+              <label for="appEmail">Email Address *</label>
+              <input id="appEmail" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="field full">
+              <label for="appInternship">Select Internship *</label>
+              <select id="appInternship" name="internship" required>
+                <option value="">Choose an internship</option>
+                <option>Web Development Intern</option>
+                <option>Software Development Intern</option>
+                <option>Data Analytics Intern</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="appEducation">College / Education</label>
+              <input id="appEducation" name="education" type="text" placeholder="Enter your college name">
+            </div>
+            <div class="field full">
+              <label for="appMessage">Why are you interested?</label>
+              <textarea id="appMessage" name="message" rows="4" placeholder="Tell us briefly about your interests"></textarea>
+            </div>
+          </div>
+          <button class="btn submit-btn" type="submit">Submit Application →</button>
+          <p id="applicationMessage" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="about-art">
+        <span class="about-orbit orbit-one"></span>
+        <span class="about-orbit orbit-two"></span>
+        <div class="about-center">
+          <span>IBM</span>
+          <strong>THINK<br>BUILD<br>GROW</strong>
+        </div>
+        <span class="about-badge">✦ Future ready</span>
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">ABOUT THE PROJECT</span>
+        <h2>Learn Today.<br><span>Lead Tomorrow.</span></h2>
+        <p>
+          The Internship Management System is a web application concept
+          designed to help students explore opportunities and submit
+          internship applications through one convenient interface.
+        </p>
+        <div class="about-point"><span>✓</span><div><strong>Easy Application</strong><p>Submit your details through a simple form.</p></div></div>
+        <div class="about-point"><span>✓</span><div><strong>Opportunity Discovery</strong><p>Browse different internship categories.</p></div></div>
+        <div class="about-point"><span>✓</span><div><strong>Simple Interface</strong><p>Navigate between pages with ease.</p></div></div>
+      </div>
+    </section>
+
+    <section id="login" class="section login-section">
+      <div class="login-card">
+        <div class="login-decoration">
+          <span class="brand-logo">IBM</span>
+          <h2>Welcome<br>Back!</h2>
+          <p>Your learning journey continues here.</p>
+          <div class="login-decoration-mark">✦</div>
+        </div>
+        <div class="login-form-area">
+          <span class="eyebrow">STUDENT PORTAL</span>
+          <h2>Login to your account</h2>
+          <p class="login-subtitle">Enter your details to continue.</p>
+          <form id="loginForm">
+            <div class="field">
+              <label for="loginEmail">Email Address</label>
+              <input id="loginEmail" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="field">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" name="password" type="password" placeholder="Enter your password" required>
+            </div>
+            <button class="btn submit-btn" type="submit">Login →</button>
+            <p id="loginMessage" class="form-message" role="status"></p>
+          </form>
+          <p class="demo-note">Demo login interface. Secure account authentication must be configured separately.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="brand footer-brand"><span class="brand-logo">IBM</span><span>Internship Management System</span></a>
+    <p>Student project · Learn, build and grow.</p>
+    <a href="#home" class="back-top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

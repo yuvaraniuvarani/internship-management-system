@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <header>
+
+        <h1>
+            Student Internship Management System
+        </h1>
+
+        <nav>
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="internships.html">
+                Internships
+            </a>
+
+            <a href="application.html">
+                My Applications
+            </a>
+
+            <a href="student-profile.html">
+                My Profile
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Profile Heading -->
+    <section class="profile-heading">
+
+        <h2>
+            My Profile
+        </h2>
+
+        <p>
+            View and manage your student profile.
+        </p>
+
+    </section>
+
+
+    <!-- Profile -->
+    <section class="profile-section">
+
+        <div class="profile-box">
+
+
+            <!-- Profile Icon -->
+            <div class="profile-icon">
+                👨‍🎓
+            </div>
+
+
+            <h2>
+                Student Profile
+            </h2>
+
+
+            <!-- Profile Details -->
+            <div class="profile-details">
+
+
+                <div class="profile-item">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        value="Arun Kumar"
+                    >
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        value="arun@gmail.com"
+                    >
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        value="9876543210"
+                    >
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <label>
+                        College Name
+                    </label>
+
+                    <input
+                        type="text"
+                        value="ABC Engineering College"
+                    >
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <label>
+                        Department
+                    </label>
+
+                    <select>
+
+                        <option>
+                            Information Technology
+                        </option>
+
+                        <option>
+                            Computer Science Engineering
+                        </option>
+
+                        <option>
+                            Electronics and Communication
+                        </option>
+
+                        <option>
+                            Electrical and Electronics
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <label>
+                        Year of Study
+                    </label>
+
+                    <select>
+
+                        <option>
+                            First Year
+                        </option>
+
+                        <option>
+                            Second Year
+                        </option>
+
+                        <option selected>
+                            Third Year
+                        </option>
+
+                        <option>
+                            Final Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="profile-item full-width">
+
+                    <label>
+                        Skills
+                    </label>
+
+                    <textarea
+                        rows="4"
+                    >HTML, CSS, JavaScript, Python, MongoDB</textarea>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="profile-buttons">
+
+                <button
+                    onclick="updateProfile()"
+                >
+                    Update Profile
+                </button>
+
+                <a
+                    href="student-dashboard.html"
+                >
+                    Back to Dashboard
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Student Internship Management System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function updateProfile() {
+
+            alert(
+                "Profile updated successfully!"
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

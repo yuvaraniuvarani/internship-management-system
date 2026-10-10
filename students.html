@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Students</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>
+            Student Internship Management System
+        </h1>
+
+        <nav>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="students.html">
+                Students
+            </a>
+
+            <a href="applications.html">
+                Applications
+            </a>
+
+            <a href="internships.html">
+                Internships
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Heading -->
+
+    <section>
+
+        <h2>
+            Manage Students
+        </h2>
+
+        <p>
+            View and manage registered students.
+        </p>
+
+    </section>
+
+
+    <!-- Search -->
+
+    <section>
+
+        <input
+            type="text"
+            id="studentSearch"
+            placeholder="Search student..."
+            onkeyup="searchStudents()"
+        >
+
+    </section>
+
+
+    <!-- Students Table -->
+
+    <section>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        S.No
+                    </th>
+
+                    <th>
+                        Student Name
+                    </th>
+
+                    <th>
+                        Email
+                    </th>
+
+                    <th>
+                        Phone
+                    </th>
+
+                    <th>
+                        College
+                    </th>
+
+                    <th>
+                        Department
+                    </th>
+
+                    <th>
+                        Year
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="studentTable">
+
+
+                <tr>
+
+                    <td>
+                        1
+                    </td>
+
+                    <td>
+                        Arun Kumar
+                    </td>
+
+                    <td>
+                        arun@gmail.com
+                    </td>
+
+                    <td>
+                        9876543210
+                    </td>
+
+                    <td>
+                        ABC Engineering College
+                    </td>
+
+                    <td>
+                        Information Technology
+                    </td>
+
+                    <td>
+                        Third Year
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="viewStudent('Arun Kumar')"
+                        >
+                            View
+                        </button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        2
+                    </td>
+
+                    <td>
+                        Priya S
+                    </td>
+
+                    <td>
+                        priya@gmail.com
+                    </td>
+
+                    <td>
+                        9876543211
+                    </td>
+
+                    <td>
+                        XYZ Engineering College
+                    </td>
+
+                    <td>
+                        Computer Science
+                    </td>
+
+                    <td>
+                        Final Year
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="viewStudent('Priya S')"
+                        >
+                            View
+                        </button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        3
+                    </td>
+
+                    <td>
+                        Rahul M
+                    </td>
+
+                    <td>
+                        rahul@gmail.com
+                    </td>
+
+                    <td>
+                        9876543212
+                    </td>
+
+                    <td>
+                        Tech Engineering College
+                    </td>
+
+                    <td>
+                        Information Technology
+                    </td>
+
+                    <td>
+                        Third Year
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="viewStudent('Rahul M')"
+                        >
+                            View
+                        </button>
+
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- Back -->
+
+    <section>
+
+        <a href="admin-dashboard.html">
+            Back to Admin Dashboard
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Student Internship Management System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+
+        function viewStudent(name) {
+
+            alert(
+                "Viewing profile of " + name
+            );
+
+        }
+
+
+        function searchStudents() {
+
+            let search =
+                document
+                .getElementById("studentSearch")
+                .value
+                .toLowerCase();
+
+
+            let rows =
+                document
+                .getElementById("studentTable")
+                .getElementsByTagName("tr");
+
+
+            for (
+                let i = 0;
+                i < rows.length;
+                i++
+            ) {
+
+                let text =
+                    rows[i]
+                    .innerText
+                    .toLowerCase();
+
+
+                if (
+                    text.includes(search)
+                ) {
+
+                    rows[i]
+                    .style.display = "";
+
+                } else {
+
+                    rows[i]
+                    .style.display = "none";
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

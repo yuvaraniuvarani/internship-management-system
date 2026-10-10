@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>Student Login</h1>
+
+            <p>Login to your Internship Account</p>
+
+            <form id="studentLoginForm">
+
+                <!-- Student Name -->
+                <label for="studentName">
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    name="studentName"
+                    placeholder="Enter Student Name"
+                    required
+                >
+
+                <!-- Email -->
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email Address"
+                    required
+                >
+
+                <!-- Password -->
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <!-- Remember Me -->
+                <div class="remember">
+
+                    <input
+                        type="checkbox"
+                        id="remember"
+                    >
+
+                    <label for="remember">
+                        Remember Me
+                    </label>
+
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit">
+                    Login
+                </button>
+
+                <!-- Forgot Password -->
+                <a href="#">
+                    Forgot Password?
+                </a>
+
+            </form>
+
+            <hr>
+
+            <p>
+                Don't have an account?
+            </p>
+
+            <a href="student-register.html">
+                Create New Account
+            </a>
+
+            <br><br>
+
+            <a href="index.html">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

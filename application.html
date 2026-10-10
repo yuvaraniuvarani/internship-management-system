@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Applications</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Student Internship Management System</h1>
+
+    <nav>
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="applications.html">Applications</a>
+        <a href="add-internship.html">Add Internship</a>
+        <a href="index.html">Logout</a>
+    </nav>
+
+</header>
+
+
+<section>
+
+    <h2>Manage Applications</h2>
+
+    <p>
+        View and manage student internship applications.
+    </p>
+
+</section>
+
+
+<section>
+
+    <input
+        type="text"
+        id="searchApplication"
+        placeholder="Search applications..."
+        onkeyup="searchApplications()"
+    >
+
+</section>
+
+
+<section>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>S.No</th>
+                <th>Student</th>
+                <th>Internship</th>
+                <th>Company</th>
+                <th>Applied Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+
+        <tbody id="applicationTable">
+
+            <tr>
+
+                <td>1</td>
+
+                <td>Arun Kumar</td>
+
+                <td>Web Development Intern</td>
+
+                <td>ABC Technologies</td>
+
+                <td>07-10-2026</td>
+
+                <td id="status1">
+                    Pending
+                </td>
+
+                <td>
+
+                    <button onclick="approveApplication(1)">
+                        Approve
+                    </button>
+
+                    <button onclick="rejectApplication(1)">
+                        Reject
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>2</td>
+
+                <td>Priya S</td>
+
+                <td>Python Developer Intern</td>
+
+                <td>XYZ Solutions</td>
+
+                <td>05-10-2026</td>
+
+                <td id="status2">
+                    Approved
+                </td>
+
+                <td>
+                    Completed
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>3</td>
+
+                <td>Rahul M</td>
+
+                <td>Data Analytics Intern</td>
+
+                <td>Tech Solutions</td>
+
+                <td>03-10-2026</td>
+
+                <td id="status3">
+                    Pending
+                </td>
+
+                <td>
+
+                    <button onclick="approveApplication(3)">
+                        Approve
+                    </button>
+
+                    <button onclick="rejectApplication(3)">
+                        Reject
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>4</td>
+
+                <td>Divya R</td>
+
+                <td>Cloud Computing Intern</td>
+
+                <td>CloudTech India</td>
+
+                <td>01-10-2026</td>
+
+                <td id="status4">
+                    Rejected
+                </td>
+
+                <td>
+                    Completed
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<section>
+
+    <a href="admin-dashboard.html">
+        Back to Admin Dashboard
+    </a>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Student Internship Management System
+    </p>
+
+</footer>
+
+
+<script>
+
+function approveApplication(id) {
+
+    document.getElementById("status" + id).innerText =
+        "Approved";
+
+    alert("Application approved successfully!");
+
+}
+
+
+function rejectApplication(id) {
+
+    document.getElementById("status" + id).innerText =
+        "Rejected";
+
+    alert("Application rejected!");
+
+}
+
+
+function searchApplications() {
+
+    let search =
+        document
+        .getElementById("searchApplication")
+        .value
+        .toLowerCase();
+
+    let rows =
+        document
+        .getElementById("applicationTable")
+        .getElementsByTagName("tr");
+
+
+    for (let i = 0; i < rows.length; i++) {
+
+        let text =
+            rows[i]
+            .innerText
+            .toLowerCase();
+
+        if (text.includes(search)) {
+
+            rows[i].style.display = "";
+
+        } else {
+
+            rows[i].style.display = "none";
+
+        }
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

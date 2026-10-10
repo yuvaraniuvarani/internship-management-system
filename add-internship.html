@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add New Internship</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Student Internship Management System</h1>
+
+    <nav>
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="applications.html">Applications</a>
+        <a href="add-internship.html">Add Internship</a>
+        <a href="index.html">Logout</a>
+    </nav>
+
+</header>
+
+
+<section>
+
+    <h2>Add New Internship</h2>
+
+    <p>
+        Enter internship details to create a new internship opportunity.
+    </p>
+
+</section>
+
+
+<section>
+
+    <form onsubmit="addInternship(event)">
+
+        <label>Company Name</label>
+
+        <input
+            type="text"
+            id="company"
+            placeholder="Enter company name"
+            required
+        >
+
+
+        <label>Internship Role</label>
+
+        <input
+            type="text"
+            id="role"
+            placeholder="Example: Web Development Intern"
+            required
+        >
+
+
+        <label>Location</label>
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Example: Chennai / Remote"
+            required
+        >
+
+
+        <label>Duration</label>
+
+        <input
+            type="text"
+            id="duration"
+            placeholder="Example: 3 Months"
+            required
+        >
+
+
+        <label>Required Skills</label>
+
+        <input
+            type="text"
+            id="skills"
+            placeholder="Example: HTML, CSS, JavaScript"
+            required
+        >
+
+
+        <label>Stipend</label>
+
+        <input
+            type="text"
+            id="stipend"
+            placeholder="Example: ₹10,000"
+            required
+        >
+
+
+        <label>Last Date to Apply</label>
+
+        <input
+            type="date"
+            id="lastDate"
+            required
+        >
+
+
+        <label>Internship Description</label>
+
+        <textarea
+            id="description"
+            rows="6"
+            placeholder="Enter internship description..."
+            required
+        ></textarea>
+
+
+        <button type="submit">
+            Add Internship
+        </button>
+
+        <button
+            type="reset"
+        >
+            Clear
+        </button>
+
+    </form>
+
+</section>
+
+
+<section>
+
+    <a href="admin-dashboard.html">
+        Back to Admin Dashboard
+    </a>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Student Internship Management System
+    </p>
+
+</footer>
+
+
+<script>
+
+function addInternship(event) {
+
+    event.preventDefault();
+
+    let company =
+        document.getElementById("company").value;
+
+    let role =
+        document.getElementById("role").value;
+
+    alert(
+        "Internship added successfully!\n\n" +
+        "Company: " + company +
+        "\nRole: " + role
+    );
+
+    document.querySelector("form").reset();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
